@@ -1,0 +1,26 @@
+
+<header class="relative bg-white z-50">
+    <nav aria-label="Top" class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="relative border-b border-gray-200 px-4 pb-14 sm:static sm:px-0 sm:pb-0">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Logo -->
+          <div class="flex flex-1">
+            <a href="/">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=amber&shade=600" alt="">
+            </a>
+          </div>
+  
+          <div class="absolute inset-x-0 bottom-0 overflow-x-auto border-t sm:static sm:border-t-0">
+            <div class="flex h-14 items-center space-x-8 px-4 sm:h-auto">
+                <a href="/products" class="text-sm font-medium text-gray-700 hover:text-gray-800">All Products</a>
+                <a href="/products?category=jeans" class="text-sm font-medium text-gray-700 hover:text-gray-800">Jeans</a>
+                <a href="/products?category=activewear" class="text-sm font-medium text-gray-700 hover:text-gray-800">Active Wear</a>
+            </div>
+          </div>
+  
+          {% include 'includes/shopping-cart-toast.html' %}
+        </div>
+      </div>
+    </nav>
+  </header>

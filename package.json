@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "styling": "npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch",
+    "server": "python3 manage.py runserver",
+    "migrate": "python3 manage.py makemigrations && python3 manage.py migrate"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.4",
+    "@tailwindcss/typography": "^0.5.9"
+  }
+}

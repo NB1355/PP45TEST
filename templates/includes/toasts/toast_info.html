@@ -1,0 +1,35 @@
+<div class="rounded-md bg-blue-50 p-4" id="message_{{ forloop.counter }}">
+    <div class="flex">
+      <div class="flex-shrink-0" >
+        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      <div class="ml-3">
+        <h3 class="text-sm font-medium text-blue-800">Info!</h3>
+        <div class="mt-2 text-sm text-blue-700">
+            {{ message }}
+        </div>
+        <div class="mt-4">
+          <div class="-mx-2 -my-1.5 flex">
+            <button type="button" class="ml-3 rounded-md bg-blue-50 px-2 py-1.5 text-sm font-medium text-blue-800 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-blue-50 dismiss-btn" data-target="message_{{ forloop.counter }}">Dismiss</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+    <div class="arrow-up arrow-info"></div>
+    <div class="w-100 toast-capper bg-info"></div>
+    <div class="toast-header bg-white text-dark">
+        <strong class="mr-auto">Alert!</strong>
+        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body bg-white">
+        {{ message }}        
+    </div>
+</div>-->

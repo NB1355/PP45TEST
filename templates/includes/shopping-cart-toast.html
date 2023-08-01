@@ -1,0 +1,60 @@
+
+<div class="flex flex-1 items-center justify-end">
+    <a href="/profile/" class="text-sm font-medium text-gray-700 hover:text-gray-800">Profile</a>
+    <!-- Search, here hidden -->
+    <a href="#" class="p-2 text-gray-400 hover:text-gray-500 ml-4 hidden">
+      <span class="sr-only">Search</span>
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+      </svg>
+    </a>
+
+    <!-- Cart -->
+    <div class="ml-4 flow-root text-sm lg:relative lg:ml-8">
+      <button type="button" id="shopping-cart-button" class="group -m-2 flex items-center p-2" aria-expanded="false">
+        <svg class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+        <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">{{ product_count }}</span>
+        <span class="sr-only">items in cart, view bag</span>
+      </button>
+      <!--
+        Entering: "transition ease-out duration-200"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "transition ease-in duration-150"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
+      <div id="shopping-cart" class="absolute hidden inset-x-0 top-16 mt-px bg-white pb-6 shadow-lg sm:px-2 lg:left-auto lg:right-0 lg:top-full lg:-mr-1.5 lg:mt-3 lg:w-80 lg:rounded-lg lg:ring-1 lg:ring-black lg:ring-opacity-5">
+        <h2 class="sr-only">Shopping Cart</h2>
+
+        <form class="mx-auto max-w-2xl px-4">
+          <ul role="list" class="divide-y divide-gray-200">
+
+            {% for item in bag_items %}
+            <li class="flex items-center py-6">
+                <!-- TODO: add fallback image -->
+              <img src="{{ item.product.image.url }}" alt="{{ item.product.description }}" class="h-16 w-16 flex-none rounded-md border border-gray-200">
+              <div class="ml-4 flex-auto">
+                <h3 class="font-medium text-gray-900">
+                  <a href="#">{{ item.product.name }}</a>
+                </h3>
+                <p class="text-gray-500">Quantity: {{ item.quantity }}</p>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+          {% if bag_items %}
+            <div class="flex">
+                <a href="/checkout" class="w-full text-center rounded-md border border-transparent bg-accent-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-gray-50">Checkout</a>
+            </div>
+            {% endif %}
+          <p class="mt-6 text-center">
+            <a href="/bag" class="text-sm font-medium text-accent-600 hover:text-accent-500">View Shopping Bag</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+  </div>
