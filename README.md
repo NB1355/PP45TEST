@@ -1,5 +1,26 @@
-# Code Institute
 
+### PPIIV: Full-Stack Toolkit
+# The was to explore the possibility of making structural changes in data models and styling of a functioning website.
+
+The business idea has merely the functionality of features in Boutic Ado, but there are requirements to be added or removed, such as:
+
+- contrllling inventory is needed
+- disabling products should be possible; the user should not see them
+- enableing a product by admin allowd
+- good ro have inventory reports ....
+
+##
+- The designe not to be limited so here is a try with Tailwind UI for more flecibility.
+- This repository is the baseline for the moleds like invententory to be adede.
+- cleaning uo the unused objects and code nedd to be done
+
+
+
+
+
+
+
+# Setup
 to get it running:
 
 (1-3 will be done automatically in gitpod)
