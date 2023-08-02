@@ -15,7 +15,7 @@ The business idea has merely the functionality of features in Boutic Ado, but th
 - cleaning uo the unused objects and code nedd to be done
 
 
-
+Note:  this repo is a copy of a DEV-version working on the basis of project Boutic Ado by cone institute.
 
 
 
